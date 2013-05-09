@@ -48,6 +48,7 @@ G =  	1 	0 	1 	0 	1 	0 	0
 		g.append(p1[i])
 		g.append(p2[i])
 		g.append(p3[i]) # For parity		
+		#Para los databits
 		g.append(d1[i]) 
 		g.append(d2[i])
 		g.append(d3[i])
@@ -63,13 +64,11 @@ G =  	1 	0 	1 	0 	1 	0 	0
 	print  matriz1
 	print "code = ", coding
 def main(): 
-	inp = (raw_input('Get in your message >>> '))
-	print type(inp)
-	print inp
+	inp = raw_input('Get in your message >>> ')
 	msg = []
 	for i in inp:
 		print i
-		msg.append(i) 
+		msg.append(int(i)) 
 	print msg
 	print len(msg)
 	encoding(msg)
