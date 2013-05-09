@@ -45,7 +45,6 @@ G =  	1 	0 	1 	0 	1 	0 	0
   	1 	1 	1 	0 	0 	0 	1  
 	'''
 	for i in range(4):
-		#g.append(p1[i], p2[i], p3[i], d1[i], d2[i], d3[i], d4[i])
 		g.append(p1[i])
 		g.append(p2[i])
 		g.append(p3[i]) # For parity
