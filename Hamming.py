@@ -6,7 +6,7 @@ from random import *
 import numpy as np
 
 def encoding(msg):
-  #Data bits vectors
+	#Data bits vectors
 	d1 = [1,0,0,0]
 	d2 = [0,1,0,0]
 	d3 = [0,0,1,0]
@@ -44,10 +44,10 @@ G =  	1 	0 	1 	0 	1 	0 	0
   	1 	1 	0 	0 	0 	1 	0 
   	1 	1 	1 	0 	0 	0 	1  
 	'''
-	for i in range(4):
+	for i in range(len(d1)): #Bien podria ser cualquier databit
 		g.append(p1[i])
 		g.append(p2[i])
-		g.append(p3[i]) # For parity
+		g.append(p3[i]) # For parity		
 		g.append(d1[i]) 
 		g.append(d2[i])
 		g.append(d3[i])
@@ -58,10 +58,6 @@ G =  	1 	0 	1 	0 	1 	0 	0
 	matriz0 = np.matrix(msg)
 	matriz1 = np.matrix(G)
 	coding = matriz0 * matriz1
-
-	print p1
-	print p2
-	print p3
 
 	print "G = ", G
 	print  matriz1
